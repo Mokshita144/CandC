@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address and Payments</title>
+    <style>
+        nav {
+            background: rgb(146, 197, 192);
+            padding: 10px;
+            text-align: right;
+        }
+
+        .b {
+            text-decoration: none;
+            color: rgb(145, 75, 24);
+            font-weight: bolder;
+            font-size: larger;
+        }
+
+        .gallery {
+            margin: 10px; /* Increased margin */
+            border: 1px solid #ccc;
+            float: left;
+            width: calc(33.33% - 30px); /* Adjusted width to accommodate increased margin */
+            height: 200px; /* Set fixed height */
+            border-radius: 10px; /* Rounded edges */
+            overflow: hidden; /* Hide overflow content */
+            box-sizing: border-box; /* Include border width in width calculation */
+            position: relative; /* Add position relative for .desc */
+        }
+
+        .gallery:hover {
+            border: 1px solid #777;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%; /* Fill the container */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded edges for images */
+            display: block; /* Remove extra space below images */
+        }
+
+        .desc {
+            position: absolute; /* Position .desc absolutely */
+            bottom: 0; /* Stick to the bottom */
+            left: 0;
+            right: 0; /* Stretch horizontally */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: white; /* White text color */
+            padding: 10px; /* Add some padding */
+            text-align: center; /* Center the text */
+            font-size: 16px; /* Set the font size */
+            font-family: Arial, sans-serif; /* Set the font family */
+        }
+
+        /* Clear floats after every third element to ensure proper alignment */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="b" href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/logpage.html">Login</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/nlogin.html">Signup</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/order.html">Order Now</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/history.html">My Orders</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/gallary.html">Gallary</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/contact.html">Contact Us</a>
+    </nav><br><br>
+
+    <div class="clearfix">
+        <div class="gallery">
+            <a target="_blank" href="/pics/cof1.jpg">
+                <img src="/pics/cof1.jpg" alt="Latte">
+            </a>
+            <div class="desc">Latte</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="/pics/cof2.jpg">
+                <img src="/pics/cof2.jpg" alt="Coffee">
+            </a>
+            <div class="desc">Coffee</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="/pics/cof3.jpg">
+                <img src="/pics/cof3.jpg" alt="Cappuccino">
+            </a>
+            <div class="desc">Cappuccino</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="/pics/bubble.jpeg">
+                <img src="/pics/bubble.jpeg" alt="Bubble Tea">
+            </a>
+            <div class="desc">Bubble Tea</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="/pics/tea.png">
+                <img src="/pics/tea.png" alt="Tea">
+            </a>
+            <div class="desc">Tea</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="/pics/infused.jpg">
+                <img src="/pics/infused.jpg" alt="Infused Tea">
+            </a>
+            <div class="desc">Infused Tea</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="/pics/red.jpg">
+                <img src="/pics/red.jpg" alt="Red Velvet">
+            </a>
+            <div class="desc">Red Velvet</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="/pics/black.jpg">
+                <img src="/pics/black.jpg" alt="Black Forest Cake">
+            </a>
+            <div class="desc">Black Forest Cake</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="/pics/mix.jpg">
+                <img src="/pics/mix.jpg" alt="Cakes">
+            </a>
+            <div class="desc">Cakes</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="/pics/samosa.jpg">
+                <img src="/pics/samosa.jpg" alt="Samosa">
+            </a>
+            <div class="desc">Samosa</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="/pics/sand.jpg">
+                <img src="/pics/sand.jpg" alt="Sandwich">
+            </a>
+            <div class="desc">Sandwich</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="/pics/puff.jpg">
+                <img src="/pics/puff.jpg" alt="Puffs">
+            </a>
+            <div class="desc">Puffs</div>
+        </div>
+    </div>
+</body>
+</html>

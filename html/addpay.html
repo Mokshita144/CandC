@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Address and Payments</title>
+    <link rel="stylesheet" href="/css/addpay.css">
+</head>
+<body>
+    <nav>
+        <a class="b" href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/logpage.html">Login</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/nlogin.html">Signup</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/order.html">Order Now</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/history.html">My Orders</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/gallary.html">Gallary</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/contact.html">Contact Us</a>
+    </nav>
+    <img src="/pics/addrpay.png"><br><br>
+    <form action="/html/orderstatus.html" method="post" onsubmit="storeCart(); return validateForm()">
+      <h4>DETAILS:</h4>
+        <p>Name: <input type="text" name="name" pattern="[A-Z][a-zA-Z\s.]{3,14}" title="Name should have 4 to 15 characters with starting capital letter" required></p>
+        <p>Delivery Address (detailed): <input type="text" name="address" required></p>
+        <p>Contact Number: <input type="tel" name="contact"  pattern="[6-9]{1}[0-9]{9}" title="give a valid phone number.Starts with 6-9 and a total of 10 digits" required></p>
+        <p>Email: <input type="text" name="email" id="email" required></p>
+        <p>Special Instructions (if any): <input type="text" name="instructions"></p><br>
+    
+        <h4>PAYMENTS:</h4>
+        <p><input type="radio" name="payment" value="Cash on delivery" required>Cash on delivery</p>
+        <p><input type="radio" name="payment" value="Net Banking" required>Net Banking</p>
+        <p><input type="radio" name="payment" value="UPI(Phonepay,Paytm,Gpay)" required>UPI(Phonepay, Paytm, Gpay)</p><br><br>
+    
+        <button onclick="storeCart()" type="submit">Confirm</button>
+    </form>
+
+    <script>
+
+        function storeCart(cart)
+         {
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+            const paymentMode = document.querySelector('input[name="payment"]:checked').value;
+            sessionStorage.setItem('paymentMode', paymentMode); 
+        }
+
+        function validateForm() 
+        {
+            let emailValue = document.getElementById("email").value.trim();
+            if (!emailValue.endsWith('@gmail.com'))
+           {
+                alert('Email must end with @gmail.com');
+                return false;
+            }
+            return true;
+        }
+        
+    </script>
+</body>
+</html>

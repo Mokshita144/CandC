@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order now</title>
+  <link rel="stylesheet" href="/css/order.css">
+</head>
+<body>
+  <nav>
+    <a class="b" href="../index.html">Home</a>
+        <a class="b" href="/html/logpage.html">Login</a>
+        <a class="b" href="/html/nlogin.html">Signup</a>
+        <a class="b" href="/html/order.html">Order Now</a>
+        <a class="b" href="/html/history.html">My Orders</a>
+        <a class="b" href="/html/gallary.html">Gallary</a>
+        <a class="b" href="/html/contact.html">Contact Us</a>
+
+  </nav>
+  <img src="/pics/order.png"><br><br>
+  <input type="text" id="searchInput" placeholder="Search items...">
+  <h3>Caffeine</h3>
+  <div id="caffeineContainer"></div>
+  <h3>Teas</h3>
+  <div id="teasContainer"></div>
+  <h3>Cakes</h3>
+  <div id="cakesContainer"></div>
+  <h3>Snacks</h3>
+  <div id="snacksContainer"></div>
+  <div id="totalContainer">
+    <h3>Total: &#8377;<span id="total">0</span></h3>
+  </div>
+  <button id="proceedButton" disabled>Go to Cart</button>
+  <script src="/js/script.js"></script>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', function() {
+      const searchText = this.value.toLowerCase().trim();
+      const menuItems = document.querySelectorAll('.menuItem');
+  
+      menuItems.forEach(function(item) {
+        const itemName = item.querySelector('h4').textContent.toLowerCase();
+        if (itemName.includes(searchText)) {
+          item.classList.remove('hidden'); 
+        } else {
+          item.classList.add('hidden'); 
+        }
+      });
+    });
+  </script>
+  </body>
+</html>

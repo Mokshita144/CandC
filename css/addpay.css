@@ -1,0 +1,48 @@
+.b
+{
+    text-decoration: none;
+    color: rgb(145, 75, 24);
+    font-weight: bolder;
+    font-size: larger;
+
+}
+img
+{
+  height: 120px;
+  width: 100%;
+}
+h4
+{
+    color: rgb(145, 75, 24);
+    font-weight: bolder;
+    margin-left: 40px;
+}
+p
+{
+    color: rgb(103, 145, 140);
+    margin-left: 40px;
+    font-weight: bolder;
+}
+nav
+{
+   background: rgb(146, 197, 192);
+   padding: 10px;
+   text-align: right;
+}
+button
+{
+    float: right;
+    margin-right: 40px;
+    width: 90px;
+    height: 40px;
+    background-color:  rgb(236, 206, 185);
+    border-color: transparent;
+    color: rgb(145, 75, 24);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+input[type="text"],[type="tel"] {
+    width: 800px; 
+    float: right;
+    margin-right: 50px;
+}
