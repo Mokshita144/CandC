@@ -1,0 +1,73 @@
+<html>
+<head>
+      <title>Sign Up</title>
+</head>
+<link rel="stylesheet" href="/css/nlogin.css">
+<body>
+	<nav>
+		<a class="b" href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/logpage.html">Login</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/nlogin.html">Signup</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/order.html">Order Now</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/history.html">My Orders</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/gallary.html">Gallary</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/contact.html">Contact Us</a>
+		
+	</nav>
+	<h1>Let's get you Signed Up ...</h1>
+	<form onsubmit="signup();">
+		<fieldset >
+			<h2 style="text-align: center;">Enter Your Details</h2><br>
+            <label>First Name</label>
+			<input class="a" type="text" name="First name" id="1" pattern="[A-Z][a-zA-Z\s.]{3,14}" title="Name should have 4 to 15 characters with starting capital letter" placeholder="Enter First Name"><br><br>
+			<label>Last Name</label>
+			<input class="a" type="text" name="Last Name" id="2" pattern="[A-Z][a-zA-Z\s.]{3,14}" title="Name should have 4 to 15 characters with starting capital letter" placeholder="Enter Last Name"><br><br>
+			<label>Date of Birth</label>
+			<input  class="a" type="Date" name="Date of Birth" id="3" placeholder="Enter DOB"><br><br>
+			<label id="5">Gender</label checked>
+			<input type="radio" name="Gender">
+			<label>Male</label>
+			<input type="radio" name="Gender">
+			<label>Female</label><br><br>
+			<label id="6">E-mail Id</label>
+			<input class="a" type="text" name="E-mail Id" placeholder="Enter your E-mail address"><br><br>
+			<label id="7">Set Password</label>
+			<input class="a" type="password" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(\W_]).{5,8}" title= "Password should contain atleast one lower case,one uppercase,a number" placeholder="Enter your password"><br><br>
+			<label id="8">Re-enter Password</label>
+			<input class="a" type="text" name="Re-enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(\W_]).{5,8}" title= "Password should contain atleast one lower case,one uppercase,a number" placeholder="Re-enter your password"><br><br>
+			<input type="checkbox" name="accept">
+			<label> I accept all the  <a href="/html/terms.html">terms and conditions</a></label><br><br>
+			<button>Confirm</button>
+		</fieldset>
+		<script>
+            function signup()
+            {
+                let fname=document.getElementById("1").value;
+                let lname=document.getElementById("2").value;
+                let dob=document.getElementById("3").value;
+                let confirm=document.getElementById("8").value;
+                let email=document.getElementById("6").value;
+				let set=document.getElementById("7").value;
+                if (fname==""||lname=="")
+                alert("please fill your name");
+                if(email=="")
+                alert("please fill your mail-id");
+                if(dob=="")
+                alert("please fill your DOB");
+                if(set=="")
+                alert("please fill your password");
+                if(confirm=="")
+                alert("please fill your cpassword");
+                if (set !=confirm) 
+                {
+                        alert("Passwords do not match");
+                }
+                if (!email.trim().endsWith('@gmail.com')) 
+                {
+                    alert('Email must end with @gmail.com');
+                }
+            }
+        </script>
+	</form>
+</body>
+</html>

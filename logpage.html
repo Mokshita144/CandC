@@ -1,0 +1,42 @@
+<html>
+<head>
+      <title>Login</title>
+</head>
+<link rel="stylesheet" href="/css/logpage.css">
+<body>
+	<nav>
+		<a class="b" href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/logpage.html">Login</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/nlogin.html">Signup</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/order.html">Order Now</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/history.html">My Orders</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/gallary.html">Gallary</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/contact.html">Contact Us</a>
+	</nav>
+	<h1>Login here...</h1>
+	<form onsubmit="signup();">
+		<fieldset >
+			<h2 style="text-align: center;">Enter Your Credentials</h2><br>
+            <label>Username</label>
+			<input class="a" type="text" name="Username" id="1" placeholder="Enter your Username or E-mail Id" required><br><br>
+			<label>Enter Password</label>
+			<input class="a" type="password" name="Password" id="2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(\W_]).{5,8}" title= "Incorrect password" placeholder="Enter your password" required><br><br>
+			<input type="submit" value="Login">
+            <div class="col">
+                <p style="color: rgb(77, 49, 29);">Don't have an account? <a href="/html/nlogin.html">Sign up</a></p>
+                <a href="#">Forgot password?</a>
+            </div>
+		</fieldset>
+	</form>
+	<script>
+      function signup()
+            {
+                let name=document.getElementById("1").value;
+                let password=document.getElementById("2").value;
+                if (name=="")
+                alert("please fill your user name");
+                if(password=="")
+                alert("please fill your password");
+            }
+	</script>
+</body>

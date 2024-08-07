@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Order status</title>
+    </head>
+  <link rel="stylesheet" href="/css/orderstat.css">
+  <body>
+      <nav>
+        <a class="b" href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/logpage.html">Login</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/nlogin.html">Signup</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/order.html">Order Now</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/history.html">My Orders</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/gallary.html">Gallary</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/contact.html">Contact Us</a>
+        </nav>
+      <img src="/pics/orderstat.png"><br><br>
+      <p>Track your order</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32627.486577401232!2d79.00961862507667!3d21.17029732881331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c02a87b9ec3b%3A0xfc51f4efeb3c8e53!2sVayusena%20Nagar%2C%20Nagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1708440289819!5m2!1sen!2sin" width="50%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p>Estimated time</p><br><br>
+      <p>Delivery instructions</p><br><br>
+      <p>Your Delivery Partner</p><br><br>
+      <p>Order Summary</p><br><br>
+      <div id="orderSummary"></div>
+      <button onclick="cancelOrder()">Cancel order</button>
+
+      <script>
+        function displayOrderSummary() {
+          const cart = JSON.parse(sessionStorage.getItem('cart'));
+          const orderSummaryDiv = document.getElementById('orderSummary');
+          orderSummaryDiv.innerHTML = '';
+          if (cart && cart.length > 0) {
+            const table = document.createElement('table');
+            const headerRow = document.createElement('tr');
+            // Create header cells
+            const nameHeader = document.createElement('th');
+            nameHeader.textContent = 'Name';
+            headerRow.appendChild(nameHeader);
+            const priceHeader = document.createElement('th');
+            priceHeader.textContent = 'Price';
+            headerRow.appendChild(priceHeader);
+            const quantityHeader = document.createElement('th');
+            quantityHeader.textContent = 'Quantity';
+            headerRow.appendChild(quantityHeader);
+            table.appendChild(headerRow);
+            // Add data rows
+            cart.forEach(item => {
+              const row = document.createElement('tr');
+              const nameCell = document.createElement('td');
+              nameCell.textContent = item.name;
+              row.appendChild(nameCell);
+              const priceCell = document.createElement('td');
+              priceCell.textContent = `₹ ${item.price}`;
+              row.appendChild(priceCell);
+              const quantityCell = document.createElement('td');
+              quantityCell.textContent = item.quantity;
+              row.appendChild(quantityCell);
+              table.appendChild(row);
+            });
+            orderSummaryDiv.appendChild(table);
+          } else {
+            orderSummaryDiv.innerHTML = '<p class="order">No order history available</p>';
+          }
+        }
+
+        function cancelOrder() {
+          const confirmCancel = confirm("Are you sure you want to cancel your order?");
+          if (confirmCancel) {
+            sessionStorage.removeItem('cart');
+            alert("Your order has been cancelled.");
+            window.location.href = "/html/order.html";
+          }
+        }
+
+        window.onload = displayOrderSummary;
+   </script>
+ </body>  
+</html>

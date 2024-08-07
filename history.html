@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order status</title>
+    <link rel="stylesheet" href="/css/orderstat.css">
+</head>
+<body>
+    <nav>
+        <a class="b" href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/logpage.html">Login</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/nlogin.html">Signup</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/order.html">Order Now</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/history.html">My Orders</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/gallary.html">Gallary</a>&nbsp;&nbsp;&nbsp;
+        <a class="b" href="/html/contact.html">Contact Us</a>
+       
+    </nav>
+    <p>Order History</p><br><br>
+    <div id="orderSummary"></div>
+<script>
+    function displayOrderSummary() {
+        const cart = JSON.parse(sessionStorage.getItem('cart'));
+        const orderSummaryDiv = document.getElementById('orderSummary');
+        orderSummaryDiv.innerHTML = '';
+
+        if (cart && cart.length > 0) {
+            const table = document.createElement('table');
+            const headerRow = document.createElement('tr');
+
+            // Create header cells
+            const nameHeader = document.createElement('th');
+            nameHeader.textContent = 'Name';
+            headerRow.appendChild(nameHeader);
+
+            const priceHeader = document.createElement('th');
+            priceHeader.textContent = 'Price';
+            headerRow.appendChild(priceHeader);
+
+            const quantityHeader = document.createElement('th');
+            quantityHeader.textContent = 'Quantity';
+            headerRow.appendChild(quantityHeader);
+
+            const dateHeader = document.createElement('th');
+            dateHeader.textContent = 'Date';
+            headerRow.appendChild(dateHeader);
+
+            const paymentModeHeader = document.createElement('th');
+            paymentModeHeader.textContent = 'Payment Mode';
+            headerRow.appendChild(paymentModeHeader);
+
+            table.appendChild(headerRow);
+
+            // Add data rows
+            const currentDate = new Date().toLocaleDateString();
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+
+                const nameCell = document.createElement('td');
+                nameCell.textContent = item.name;
+                row.appendChild(nameCell);
+
+                const priceCell = document.createElement('td');
+                priceCell.textContent = `₹ ${item.price}`;
+                row.appendChild(priceCell);
+
+                const quantityCell = document.createElement('td');
+                quantityCell.textContent = item.quantity;
+                row.appendChild(quantityCell);
+
+                const dateCell = document.createElement('td');
+                dateCell.textContent = currentDate; // Displaying current date for each order
+                row.appendChild(dateCell);
+
+                const paymentModeCell = document.createElement('td');
+                const paymentMode = sessionStorage.getItem('paymentMode');
+                paymentModeCell.textContent = paymentMode ? paymentMode : 'Not available';
+                row.appendChild(paymentModeCell);
+
+                table.appendChild(row);
+            });
+
+            orderSummaryDiv.appendChild(table);
+        } else {
+            orderSummaryDiv.innerHTML = '<p class="history">No order history available</p>';
+        }
+    }
+
+    window.onload = displayOrderSummary;
+</script>
+</body>  
+</html>

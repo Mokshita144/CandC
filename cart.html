@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" type="text/css" href="/css/order.css">
+</head>
+<body>
+  <h2>Your Cart</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="cartContainer">
+      </tbody>
+    </table>
+  </div>
+  <div id="totalContainer">
+    <h3>Total: <span id="total">0</span></h3>
+  </div>
+  <a href="/html/addpay.html">
+    <button class="right"id="checkoutButton">Checkout</button>
+  </a>
+  <script src="/js/cart.js"></script>
+</body>
+</html>
