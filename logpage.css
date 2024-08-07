@@ -1,0 +1,70 @@
+body
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: rgb(145, 75, 24);
+    font-weight: bold;
+    background-image: url('../pics/cup.jpg');
+}
+
+h1
+{
+    color: rgb(145, 75, 24);
+    font-family:'Times New Roman';
+    font-size: xx-large;
+    font-style: italic;
+   
+}
+fieldset
+{
+    display: inline-block;
+    border-radius: 4px;
+    margin:auto;
+    text-align: left;
+    border: 4px solid rgb(120, 189, 191);
+    /* width: 500px */
+}
+form
+{
+    text-align: center;
+}
+button
+{
+   float: right;
+}
+input
+{
+    width: 100%;
+    box-sizing: border-box; 
+    margin-bottom: 16px;
+    padding: 5px;
+}
+.col
+{
+    text-align: center;
+    background-color: darkgray;
+    padding: 10px;
+    
+}
+.b
+{
+    color: rgb(145, 75, 24);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: larger;
+}
+label
+{
+    font-size: large;
+}
+nav
+{
+background: rgb(146, 197, 192);
+   padding: 10px;
+   text-align: right;
+}
+a
+{
+    color: rgb(77, 49, 29);
+}

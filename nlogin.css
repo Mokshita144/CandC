@@ -1,0 +1,64 @@
+body
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: rgb(145, 75, 24);
+    font-weight: bold;
+    background-image: url('../pics/cup.jpg');
+}
+h1
+{
+    color: rgb(145, 75, 24);
+    font-family:'Times New Roman';
+    font-size: xx-large;
+    font-style: italic;
+}
+fieldset
+{
+    /* display: inline-block; */
+    border-radius: 4px;
+    margin:auto;
+    text-align: left;
+    border: 4px solid rgb(120, 189, 191);
+    width: 500px
+}
+/* form
+{
+    text-align: center;
+} */
+button
+{
+   float: right;
+}
+a
+{
+    color: brown;
+}
+input[type=text],[type=Date]
+{
+    width: 100%;
+    box-sizing: border-box; 
+    margin-bottom: 16px;
+    padding: 5px;
+}
+input[type=password]
+{
+    width: 100%;
+    box-sizing: border-box; 
+    margin-bottom: 16px;
+    padding: 5px;
+}
+.b
+{
+    color: rgb(145, 75, 24);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: larger;
+}
+nav
+{
+   background: rgb(146, 197, 192);
+   padding: 8px;
+   text-align: right;
+}

@@ -1,0 +1,45 @@
+nav {
+    background: rgb(146, 197, 192);
+    padding: 10px;
+    text-align: right;
+}
+
+.b {
+    text-decoration: none;
+    color: rgb(145, 75, 24);
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: calc(33.33% - 10px); /* 3 images in a row */
+    border-radius: 10px; /* Rounded edges */
+    overflow: hidden; /* Hide overflow content */
+    box-sizing: border-box; /* Include border width in width calculation */
+}
+
+.gallery:hover {
+    border: 1px solid #777;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded edges for images */
+    display: block; /* Remove extra space below images */
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Clear floats after every third element to ensure proper alignment */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

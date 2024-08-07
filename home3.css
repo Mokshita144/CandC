@@ -1,0 +1,111 @@
+nav
+{
+   background: rgb(146, 197, 192);
+   padding: 10px;
+   text-align: right;
+}
+a
+{
+    text-decoration: none;
+    color: rgb(145, 75, 24);
+    font-weight: bolder;
+    font-size: larger;
+
+}
+body
+{
+    /* background-image: url("https://img.freepik.com/premium-vector/hand-painted-watercolor-background-shape-colorful-sky-clouds_156268-365.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702771200&semt=ais"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+img
+{
+  height: 375px;
+  width: 100%;
+}
+p
+{
+    font-family: pacifico;
+    color: rgb(145, 75, 24);
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+.one
+{
+   width:35%;
+   margin-left: 20px;
+   height:500px;
+   float: left;
+   margin-right: 50px;
+}
+.two
+{
+   color: rgb(140, 187, 183);
+   line-height: 1.8;
+   margin-right: 50px;
+   margin-top: 50px;
+   text-align: left;
+}
+.cc
+{
+    text-align: right;
+    color: rgb(145, 75, 24);
+    margin-right: 50px;
+}
+.i3
+{
+    float: left;
+    height: 45%;
+    width: 35%;
+    margin-right: 50px;
+    margin-left: 20px;
+}
+.p3
+{
+    color: rgb(145, 75, 24);
+    text-align: left;
+}
+.p4
+{
+    text-align: left;
+    color: rgb(140, 187, 183);
+    line-height: 1.8;
+}
+.review
+{
+    color: rgb(145, 75, 24);
+    text-align: left;
+    margin-left: 20px;
+}
+.i4
+{
+    float: left;
+    height: 25%;
+    width: 17%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.re
+{
+    color: rgb(145, 75, 24);
+    text-align: left;
+    line-height: 1.8;
+}
+.ii4
+{
+    float: left;
+    height: 25%;
+    width: 17%;
+    
+}
+div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.grid
+{
+    display:inline;
+}
